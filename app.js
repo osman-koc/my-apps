@@ -583,10 +583,6 @@
     });
   }
 
-  function bindLogo() {
-    $("#sidebarLogo").addEventListener("click", () => navigate("discover"));
-  }
-
   // Search
   function bindSearch() {
     const input = $("#searchInput");
@@ -640,7 +636,6 @@
 
     buildSidebar();
     navigate("discover");
-    bindLogo();
     bindSidebar();
     bindSearch();
     bindKeyboard();
