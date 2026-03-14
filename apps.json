@@ -456,6 +456,40 @@
       "screenshots": []
     },
     {
+      "id": "wvw-desktop",
+      "name": "World Vibe Web",
+      "subtitle": "The distributed app store, on your desktop",
+      "description": "A native desktop app for wvw.dev — browse, discover, and install vibe-coded open-source apps from across GitHub without opening a browser.",
+      "longDescription": "World Vibe Web desktop brings the full wvw.dev experience to your menu bar. Browse the community-curated catalog of open-source apps, read reviews, view screenshots, and install via Homebrew or direct download — all from a native window with macOS title bar integration. External links open in your default browser. Built with Tauri and Rust for a lightweight, fast experience. Available for macOS (Apple Silicon & Intel), Windows, and Linux.",
+      "icon": "https://raw.githubusercontent.com/f/wvw.dev/master/logo.png",
+      "iconStyle": {
+        "scale": 1.3,
+        "objectFit": "cover",
+        "borderRadius": "22%"
+      },
+      "category": [
+        "macos",
+        "utilities"
+      ],
+      "platform": "macOS",
+      "price": "Free",
+      "github": "https://github.com/f/wvw.dev-app",
+      "homepage": "https://wvw.dev",
+      "language": "Rust",
+      "stars": 1,
+      "forks": 0,
+      "downloadUrl": "https://github.com/f/wvw.dev-app/releases/latest",
+      "requirements": "macOS 10.15+, Windows 10+, or Linux",
+      "features": [
+        "Native desktop app powered by Tauri",
+        "Browse the full wvw.dev catalog",
+        "Available for macOS, Windows, and Linux",
+        "Lightweight — no Electron, built with Rust",
+        "Auto-updated from wvw.dev"
+      ],
+      "screenshots": []
+    },
+    {
       "id": "prompts-chat-book",
       "name": "The Interactive Book of Prompting",
       "subtitle": "An Interactive Guide to AI Prompts",
