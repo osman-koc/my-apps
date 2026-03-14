@@ -454,6 +454,44 @@
         "Pure HTML/CSS/JS — no dependencies"
       ],
       "screenshots": []
+    },
+    {
+      "id": "prompts-chat-book",
+      "name": "The Interactive Book of Prompting",
+      "subtitle": "An Interactive Guide to AI Prompts",
+      "description": "A comprehensive interactive guide to crafting clear and effective AI prompts — from foundations to advanced techniques like chain-of-thought, few-shot learning, and agentic systems.",
+      "longDescription": "Written by Fatih Kadir Akın, curator of the 151K+ star Awesome ChatGPT Prompts repository. This interactive book covers how AI models think and process prompts, crafting clear and specific prompts, advanced techniques including chain-of-thought, few-shot learning, and prompt chaining, plus real-world use cases for writing, coding, education, and business. Features 25 interactive chapters with examples you can try directly in the browser. Continuously updated as AI evolves.",
+      "icon": "https://raw.githubusercontent.com/f/prompts.chat/main/public/logo-dark.svg",
+      "iconStyle": {
+        "scale": 0.9,
+        "objectFit": "contain",
+        "bgColor": "#000000",
+        "padding": "18%"
+      },
+      "category": [
+        "productivity"
+      ],
+      "platform": "Web",
+      "price": "$20,00",
+      "github": "https://github.com/f/prompts.chat",
+      "homepage": "https://prompts.chat/book",
+      "buyUrl": "https://donate.stripe.com/aFa8wO4NF2S96jDfn4dMI09",
+      "language": "TypeScript",
+      "stars": 151687,
+      "forks": 19928,
+      "requirements": "Any modern browser",
+      "features": [
+        "25 interactive chapters",
+        "Chain-of-thought and few-shot learning techniques",
+        "Prompt chaining and agentic systems",
+        "Try examples directly in the browser",
+        "Real-world use cases for writing, coding, education",
+        "Continuously updated with new techniques",
+        "Available as PDF download"
+      ],
+      "screenshots": [
+        "https://prompts.chat/_next/image?url=%2Fbook-cover-photo.jpg&w=3840&q=75&dpl=dpl_F29LRFNhru548nrCnC6hVC8tM36p"
+      ]
     }
   ]
 }

@@ -683,6 +683,72 @@ body {
   transform: scale(0.95);
 }
 
+/* Buy Button */
+.buy-btn.get-btn,
+.buy-btn.featured-get-btn {
+  background: rgba(255, 149, 0, 0.15);
+  color: #ff9500;
+}
+.buy-btn.get-btn:hover,
+.buy-btn.featured-get-btn:hover {
+  background: rgba(255, 149, 0, 0.25);
+}
+.buy-btn.app-detail-get-btn {
+  background: #ff9500;
+  color: #fff;
+}
+.buy-btn.app-detail-get-btn:hover {
+  background: #e68600;
+}
+
+/* Buy Modal */
+.buy-modal-price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff9500;
+  margin: 4px 0 12px;
+}
+.buy-modal-link {
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  word-break: break-all;
+  font-size: 13px;
+}
+.buy-modal-link a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.buy-modal-link a:hover {
+  text-decoration: underline;
+}
+.buy-modal-btn {
+  text-decoration: none;
+  text-align: center;
+  background: #ff9500 !important;
+}
+.buy-modal-btn:hover {
+  background: #e68600 !important;
+}
+.buy-modal-disclaimer {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-top: 16px;
+  padding: 12px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--text-tertiary);
+}
+.buy-modal-disclaimer svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  opacity: 0.6;
+}
+
 /* App Grid (for "all apps" / category views) */
 .app-grid {
   display: grid;
