@@ -69,16 +69,17 @@
       "price": "Free",
       "github": null,
       "homepage": "https://coldcaseapp.com",
-      "downloadUrl": "https://apps.apple.com/tr/app/coldcase-online-dedektif/id6758562111",
-      "language": "Flutter",
+      "language": "React Native",
       "requirements": "iOS 13+ or Android 6+",
+      "links": [
+        { "label": "App Store", "url": "https://apps.apple.com/tr/app/coldcase-online-dedektif/id6758562111", "platform": "ios" },
+        { "label": "Google Play", "url": "https://play.google.com/store/apps/details?id=com.osmankoc.coldcase", "platform": "android" }
+      ],
       "features": [
         "Investigate immersive unsolved case files",
         "Analyze clues, evidence photos, and witness statements",
         "Connect the dots and name your suspect",
-        "Mobile-first design with intuitive investigation mechanics",
-        "App Store: https://apps.apple.com/tr/app/coldcase-online-dedektif/id6758562111",
-        "Google Play: https://play.google.com/store/apps/details?id=com.osmankoc.coldcase"
+        "Mobile-first design with intuitive investigation mechanics"
       ],
       "screenshots": []
     },
@@ -96,15 +97,16 @@
       "price": "Free",
       "github": null,
       "homepage": "https://yadet.app",
-      "downloadUrl": "https://apps.apple.com/tr/app/yadet-uzaktan-mezar-bak%C4%B1m%C4%B1/id6756832778",
-      "language": "Flutter",
+      "language": "React Native",
       "requirements": "iOS 13+ or Android 6+",
+      "links": [
+        { "label": "App Store", "url": "https://apps.apple.com/tr/app/yadet-uzaktan-mezar-bak%C4%B1m%C4%B1/id6756832778", "platform": "ios" },
+        { "label": "Google Play", "url": "https://play.google.com/store/apps/details?id=com.osmankoc.yadet", "platform": "android" }
+      ],
       "features": [
         "Publish remote cemetery care requests",
         "Local service providers accept and complete tasks on-site",
-        "Photo updates and task monitoring from anywhere",
-        "App Store: https://apps.apple.com/tr/app/yadet-uzaktan-mezar-bak%C4%B1m%C4%B1/id6756832778",
-        "Google Play: https://play.google.com/store/apps/details?id=com.osmankoc.yadet"
+        "Photo updates and task monitoring from anywhere"
       ],
       "screenshots": []
     },
@@ -274,15 +276,16 @@
       "price": "Free",
       "github": "https://github.com/osman-koc/deprem-dudugu",
       "homepage": "https://apps.apple.com/app/id6477729209",
-      "downloadUrl": "https://play.google.com/store/apps/details?id=com.osmankoc.DepremDudugu",
       "language": "Flutter",
       "requirements": "iOS 12+ or Android 5+",
+      "links": [
+        { "label": "App Store", "url": "https://apps.apple.com/app/id6477729209", "platform": "ios" },
+        { "label": "Google Play", "url": "https://play.google.com/store/apps/details?id=com.osmankoc.DepremDudugu", "platform": "android" }
+      ],
       "features": [
         "Loud emergency whistle — no internet required",
         "Designed for earthquake survival situations",
         "Works offline, no account needed",
-        "App Store: https://apps.apple.com/app/id6477729209",
-        "Google Play: https://play.google.com/store/apps/details?id=com.osmankoc.DepremDudugu",
         "Open source on GitHub"
       ],
       "screenshots": []
@@ -305,15 +308,16 @@
       "price": "Free",
       "github": "https://github.com/osman-koc/random-quotes-app",
       "homepage": "https://apps.apple.com/app/id6477748373",
-      "downloadUrl": "https://play.google.com/store/apps/details?id=com.osmankoc.randomquotes",
       "language": "Flutter",
       "requirements": "iOS 12+ or Android 5+",
+      "links": [
+        { "label": "App Store", "url": "https://apps.apple.com/app/id6477748373", "platform": "ios" },
+        { "label": "Google Play", "url": "https://play.google.com/store/apps/details?id=com.osmankoc.randomquotes", "platform": "android" }
+      ],
       "features": [
         "A new inspirational quote every day",
         "Browse quotes by category",
         "Save and share your favorites",
-        "App Store: https://apps.apple.com/app/id6477748373",
-        "Google Play: https://play.google.com/store/apps/details?id=com.osmankoc.randomquotes",
         "Open source on GitHub"
       ],
       "screenshots": []
@@ -338,11 +342,13 @@
       "homepage": "https://play.google.com/store/apps/details?id=com.osmkoc.simpletodo",
       "language": "Flutter",
       "requirements": "Android 5+",
+      "links": [
+        { "label": "Google Play", "url": "https://play.google.com/store/apps/details?id=com.osmkoc.simpletodo", "platform": "android" }
+      ],
       "features": [
         "Minimalist task management — no distractions",
         "No account or internet required",
         "Tasks stored locally on your device",
-        "Google Play: https://play.google.com/store/apps/details?id=com.osmkoc.simpletodo",
         "Open source on GitHub"
       ],
       "screenshots": []
@@ -367,11 +373,13 @@
       "homepage": "https://play.google.com/store/apps/details?id=com.osmankoc.babysleeper",
       "language": "Flutter",
       "requirements": "Android 5+",
+      "links": [
+        { "label": "Google Play", "url": "https://play.google.com/store/apps/details?id=com.osmankoc.babysleeper", "platform": "android" }
+      ],
       "features": [
         "Curated soothing sounds and lullabies",
         "White noise, nature sounds, and classic lullabies",
         "Built-in sleep timer",
-        "Google Play: https://play.google.com/store/apps/details?id=com.osmankoc.babysleeper",
         "Open source on GitHub"
       ],
       "screenshots": []
