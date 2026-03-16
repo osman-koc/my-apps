@@ -1,31 +1,41 @@
 <p align="center">
-  <img src="logo.svg" width="128" height="128" alt="Appétit">
+  <img src="logo.svg" width="128" height="128" alt="kocdev">
 </p>
 
-<h1 align="center">Appétit</h1>
+<h1 align="center">kocdev store</h1>
 
 <p align="center">
-  <em>Bon appétit for apps.</em><br>
-  An App Store-inspired catalog for your projects — powered by a single JSON file.
+  <em>Apps & tools crafted by Osman Koç.</em><br>
+  A personal app catalog powered by <a href="https://github.com/f/appetit">Appétit</a> — the App Store-inspired catalog by <a href="https://github.com/f">Fatih Kadir Akın (FKA)</a>.
 </p>
 
 <p align="center">
-  <a href="https://apps.fka.dev">Live Demo</a> ·
-  <a href="#quick-start">Quick Start</a> ·
-  <a href="#make-it-yours">Make It Yours</a>
+  <a href="https://apps.osmankoc.dev">Live</a> ·
+  <a href="https://osmankoc.dev/projects">osmankoc.dev/projects</a> ·
+  <a href="https://github.com/f/appetit">Upstream: Appétit</a>
 </p>
 
 ---
 
+> **This is a fork of [Appétit](https://github.com/f/appetit)** by [Fatih Kadir Akın (FKA)](https://github.com/f), customised as a personal catalog for [Osman Koç](https://osmankoc.dev)'s apps and projects.
+> All credit for the framework, UI, and architecture goes to FKA. This fork changes only the store data, branding, and category configuration.
+
 Appétit is a beautiful, browsable app catalog that looks and feels like the Apple App Store. It's built entirely with vanilla HTML, CSS, and JS — no frameworks, no build step, no dependencies. Just edit `apps.json` and deploy.
 
-## Features
+## What's different from upstream
+
+- **Store:** rebranded as `kocdev` — Osman Koç's personal app catalog
+- **Apps:** 14 projects from [osmankoc.dev/projects](https://osmankoc.dev/projects) (mobile, web, VS Code extensions, Telegram bots, games)
+- **Categories:** Mobile Apps, Web Apps, Developer Tools, Telegram Bots, Games
+- **Logo:** custom `OK` monogram
+- **Domain:** `apps.osmankoc.dev`
+
+## Features (upstream)
 
 - **App Store UI** — Sidebar navigation, featured carousel, app cards, detail pages with screenshots
 - **Dark & Light themes** — System preference detection with manual toggle, persisted in localStorage
 - **JSON-driven** — All apps, categories, and featured items defined in a single `apps.json`
 - **Install modals** — `brew install` and `npx` commands with one-click copy to clipboard
-- **Categories** — macOS, Web, CLI, Developer Tools, Productivity (or define your own)
 - **Search** — Instant client-side filtering across names, descriptions, and features
 - **GitHub stats** — Live star and fork counts, updatable with the included `update-stats.sh` script
 - **Responsive** — Desktop sidebar collapses on mobile
@@ -34,16 +44,14 @@ Appétit is a beautiful, browsable app catalog that looks and feels like the App
 ## Quick Start
 
 ```bash
-git clone https://github.com/f/appetit.git
-cd appetit
+git clone https://github.com/osman-koc/my-apps.git
+cd my-apps
 python3 -m http.server 8080
 ```
 
 Open [localhost:8080](http://localhost:8080) and you're running.
 
-## Make It Yours
-
-### 1. Add your apps
+## Adding or editing apps
 
 Edit `apps.json`. Each app entry supports:
 
@@ -56,34 +64,32 @@ Edit `apps.json`. Each app entry supports:
   "longDescription": "Full description for the detail page.",
   "icon": "https://example.com/icon.png",   // or use iconEmoji: "🚀"
   "iconStyle": { "scale": 1.3, "objectFit": "cover", "borderRadius": "22%" },
-  "category": ["macos", "cli"],
-  "platform": "macOS",
+  "category": ["mobile", "web"],
+  "platform": "iOS & Android",
   "price": "Free",
-  "github": "https://github.com/you/my-app",
+  "github": "https://github.com/osman-koc/my-app",  // null if private
   "homepage": "https://my-app.dev",
-  "language": "Swift",
-  "stars": 42,
-  "forks": 3,
-  "brew": "brew install you/tap/my-app",    // shows install modal
-  "installCommand": "npx my-app",           // alternative install modal
-  "downloadUrl": "https://github.com/you/my-app/releases/latest",
-  "requirements": "macOS 15+",
+  "language": "Flutter",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.example.app",
+  "requirements": "iOS 13+ or Android 6+",
   "features": ["Feature one", "Feature two"],
   "screenshots": ["https://example.com/screenshot.png"]
 }
 ```
 
-### 2. Configure categories
+### Categories used in this fork
 
 ```json
 "categories": [
-  { "id": "macos", "name": "macOS Apps" },
-  { "id": "cli", "name": "CLI Tools" },
-  { "id": "web", "name": "Web Apps" }
+  { "id": "mobile", "name": "Mobile Apps" },
+  { "id": "web", "name": "Web Apps" },
+  { "id": "developer-tools", "name": "Developer Tools" },
+  { "id": "telegram", "name": "Telegram Bots" },
+  { "id": "games", "name": "Games" }
 ]
 ```
 
-### 3. Set featured apps
+### Featured banner
 
 ```json
 "featured": [
@@ -95,10 +101,6 @@ Edit `apps.json`. Each app entry supports:
   }
 ]
 ```
-
-### 4. Deploy
-
-Push to GitHub and enable Pages — or drop the files on any static host (Netlify, Vercel, Cloudflare Pages, S3, etc).
 
 ## Update GitHub Stats
 
@@ -131,8 +133,14 @@ GITHUB_TOKEN=ghp_xxx ./update-stats.sh
 
 1. Push to a GitHub repo
 2. Settings → Pages → Source: branch `master`, folder `/`
-3. *(Optional)* Add a `CNAME` file with your custom domain
+3. Add a `CNAME` file with your custom domain (`apps.osmankoc.dev`)
+
+## Credits
+
+- **[Appétit](https://github.com/f/appetit)** — original framework by [Fatih Kadir Akın (FKA)](https://github.com/f) · MIT License
+- **kocdev store** — fork & customisation by [Osman Koç](https://osmankoc.dev)
 
 ## License
 
 MIT
+

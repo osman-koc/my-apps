@@ -1,4 +1,4 @@
-{
+var APPS_DATA = {
   "$schema": "https://wvw.dev/apps.schema.json",
   "store": {
     "name": "kocdev",
@@ -377,4 +377,4 @@
       "screenshots": []
     }
   ]
-}
+};
