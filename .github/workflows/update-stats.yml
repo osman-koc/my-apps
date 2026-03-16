@@ -24,6 +24,6 @@ jobs:
           git diff --quiet apps.json && exit 0
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add apps.json
+          git add apps.json apps.js
           git commit -m "chore: update GitHub stats"
           git push
