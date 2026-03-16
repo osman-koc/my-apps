@@ -16,10 +16,13 @@
 
   const icons = {
     discover: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`,
-    mobile: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>`,
     web: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`,
     "developer-tools": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
-    telegram: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>`,
+    utilities: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`,
+    productivity: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>`,
+    lifestyle: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`,
+    "health-fitness": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+    entertainment: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="5 3 19 12 5 21 5 3"/></svg>`,
     games: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="12" rx="3"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="4" y1="12" x2="8" y2="12"/><circle cx="16" cy="10" r="1" fill="currentColor"/><circle cx="19" cy="12" r="1" fill="currentColor"/></svg>`,
     github: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>`,
   };
@@ -106,7 +109,7 @@
     if (isPaidApp(app)) return app.price;
     if (app.links && app.links.length > 0) return "Get";
     if (app.brew || app.downloadUrl || app.installCommand) return "Get";
-    if (app.category && (app.category.includes("mobile") || app.category.includes("games"))) return "Get";
+    if (app.category && (app.category.includes("games") || app.category.includes("entertainment"))) return "Get";
     return "View";
   }
 
@@ -167,10 +170,13 @@
     html += `<div class="nav-section-label">Categories</div>`;
 
     const categories = [
-      { id: "mobile", name: "Mobile Apps", icon: icons.mobile },
       { id: "web", name: "Web Apps", icon: icons.web },
       { id: "developer-tools", name: "Developer Tools", icon: icons["developer-tools"] },
-      { id: "telegram", name: "Telegram Bots", icon: icons.telegram },
+      { id: "utilities", name: "Utilities", icon: icons.utilities },
+      { id: "productivity", name: "Productivity", icon: icons.productivity },
+      { id: "lifestyle", name: "Lifestyle", icon: icons.lifestyle },
+      { id: "health-fitness", name: "Health & Fitness", icon: icons["health-fitness"] },
+      { id: "entertainment", name: "Entertainment", icon: icons.entertainment },
       { id: "games", name: "Games", icon: icons.games },
     ];
 
@@ -214,9 +220,12 @@
     const apps = data.apps;
     const featuredList = Array.isArray(data.featured) ? data.featured : [data.featured];
 
-    const mobileApps = apps.filter((a) => a.category.includes("mobile"));
     const devApps = apps.filter((a) => a.category.includes("developer-tools"));
-    const telegramApps = apps.filter((a) => a.category.includes("telegram"));
+    const utilityApps = apps.filter((a) => a.category.includes("utilities"));
+    const productivityApps = apps.filter((a) => a.category.includes("productivity"));
+    const lifestyleApps = apps.filter((a) => a.category.includes("lifestyle"));
+    const healthApps = apps.filter((a) => a.category.includes("health-fitness"));
+    const entertainmentApps = apps.filter((a) => a.category.includes("entertainment"));
     const gameApps = apps.filter((a) => a.category.includes("games"));
 
     const dots = featuredList.length > 1
@@ -263,16 +272,6 @@
         </div>
       </div>
 
-      ${mobileApps.length > 0 ? `
-      <div class="section">
-        <div class="section-header">
-          <h2>Mobile Apps</h2>
-        </div>
-        <div class="app-list">
-          ${mobileApps.map((a) => appRow(a)).join("")}
-        </div>
-      </div>` : ""}
-
       ${devApps.length > 0 ? `
       <div class="section">
         <div class="section-header">
@@ -283,13 +282,53 @@
         </div>
       </div>` : ""}
 
-      ${telegramApps.length > 0 ? `
+      ${utilityApps.length > 0 ? `
       <div class="section">
         <div class="section-header">
-          <h2>Telegram Bots</h2>
+          <h2>Utilities</h2>
         </div>
         <div class="app-list">
-          ${telegramApps.map((a) => appRow(a)).join("")}
+          ${utilityApps.map((a) => appRow(a)).join("")}
+        </div>
+      </div>` : ""}
+
+      ${productivityApps.length > 0 ? `
+      <div class="section">
+        <div class="section-header">
+          <h2>Productivity</h2>
+        </div>
+        <div class="app-list">
+          ${productivityApps.map((a) => appRow(a)).join("")}
+        </div>
+      </div>` : ""}
+
+      ${lifestyleApps.length > 0 ? `
+      <div class="section">
+        <div class="section-header">
+          <h2>Lifestyle</h2>
+        </div>
+        <div class="app-list">
+          ${lifestyleApps.map((a) => appRow(a)).join("")}
+        </div>
+      </div>` : ""}
+
+      ${healthApps.length > 0 ? `
+      <div class="section">
+        <div class="section-header">
+          <h2>Health & Fitness</h2>
+        </div>
+        <div class="app-list">
+          ${healthApps.map((a) => appRow(a)).join("")}
+        </div>
+      </div>` : ""}
+
+      ${entertainmentApps.length > 0 ? `
+      <div class="section">
+        <div class="section-header">
+          <h2>Entertainment</h2>
+        </div>
+        <div class="app-list">
+          ${entertainmentApps.map((a) => appRow(a)).join("")}
         </div>
       </div>` : ""}
 

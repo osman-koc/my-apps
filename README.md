@@ -26,7 +26,7 @@ Appétit is a beautiful, browsable app catalog that looks and feels like the App
 
 - **Store:** rebranded as `kocdev` — Osman Koç's personal app catalog
 - **Apps:** projects from [osmankoc.dev/projects](https://osmankoc.dev/projects) (mobile, web, VS Code extensions, Telegram bots, games)
-- **Categories:** Mobile Apps, Web Apps, Developer Tools, Telegram Bots, Games
+- **Categories:** Web Apps, Developer Tools, Utilities, Productivity, Lifestyle, Health & Fitness, Entertainment, Games
 - **Logo:** custom `OK` monogram
 - **Domain:** `apps.osmankoc.dev`
 
@@ -81,10 +81,13 @@ Edit `apps.json`. Each app entry supports:
 
 ```json
 "categories": [
-  { "id": "mobile", "name": "Mobile Apps" },
   { "id": "web", "name": "Web Apps" },
   { "id": "developer-tools", "name": "Developer Tools" },
-  { "id": "telegram", "name": "Telegram Bots" },
+  { "id": "utilities", "name": "Utilities" },
+  { "id": "productivity", "name": "Productivity" },
+  { "id": "lifestyle", "name": "Lifestyle" },
+  { "id": "health-fitness", "name": "Health & Fitness" },
+  { "id": "entertainment", "name": "Entertainment" },
   { "id": "games", "name": "Games" }
 ]
 ```

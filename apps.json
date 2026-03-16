@@ -29,14 +29,6 @@
   ],
   "categories": [
     {
-      "id": "all",
-      "name": "All Apps"
-    },
-    {
-      "id": "mobile",
-      "name": "Mobile Apps"
-    },
-    {
       "id": "web",
       "name": "Web Apps"
     },
@@ -45,8 +37,24 @@
       "name": "Developer Tools"
     },
     {
-      "id": "telegram",
-      "name": "Telegram Bots"
+      "id": "utilities",
+      "name": "Utilities"
+    },
+    {
+      "id": "productivity",
+      "name": "Productivity"
+    },
+    {
+      "id": "lifestyle",
+      "name": "Lifestyle"
+    },
+    {
+      "id": "health-fitness",
+      "name": "Health & Fitness"
+    },
+    {
+      "id": "entertainment",
+      "name": "Entertainment"
     },
     {
       "id": "games",
@@ -62,8 +70,8 @@
       "longDescription": "ColdCase is a mobile-first detective game where every case is a mystery waiting to be solved. Dive into detailed case files, examine evidence photos, cross-reference witness statements, and piece together the clues to name your suspect. Each case is crafted to challenge your deductive reasoning — can you close the case before the trail goes cold?",
       "icon": "https://osmankoc.dev/images/projects/coldcase-app.png",
       "category": [
-        "mobile",
-        "games"
+        "games",
+        "entertainment"
       ],
       "platform": "iOS & Android",
       "price": "Free",
@@ -91,7 +99,8 @@
       "longDescription": "yâdet is a mobile-first platform designed for remote grave maintenance. Whether you live far from your loved ones’ burial site or simply cannot visit regularly, yâdet connects you with trusted local service providers who complete care tasks on-site. You can publish requests, receive photo updates, and monitor progress — all from your phone, anywhere in the world.",
       "icon": "https://osmankoc.dev/images/projects/yadet-logo.png",
       "category": [
-        "mobile"
+        "utilities",
+        "lifestyle"
       ],
       "platform": "iOS & Android",
       "price": "Free",
@@ -168,7 +177,8 @@
       "longDescription": "En Yakın Hastaneyi Bul is a Telegram bot that, given your location, instantly returns the name, address, phone number, and map link for the nearest hospitals in Türkiye. Just share your location in the chat and the bot takes care of the rest.",
       "icon": "https://osmankoc.dev/images/projects/en-yakin-hastaneyi-bul-logo.jpg",
       "category": [
-        "telegram"
+        "utilities",
+        "health-fitness"
       ],
       "platform": "Telegram",
       "price": "Free",
@@ -192,7 +202,8 @@
       "longDescription": "En Yakın Eczaneyi Bul is a Telegram bot that locates the closest open or on-duty pharmacies in Türkiye based on your shared location. It responds with the pharmacy name, address, phone number, and a direct map link — perfect for late-night situations when you need to find a nöbetçi eczane quickly.",
       "icon": "https://osmankoc.dev/images/projects/en-yakin-eczaneyi-bul-logo.jpg",
       "category": [
-        "telegram"
+        "utilities",
+        "health-fitness"
       ],
       "platform": "Telegram",
       "price": "Free",
@@ -270,7 +281,8 @@
         "borderRadius": "22%"
       },
       "category": [
-        "mobile"
+        "utilities",
+        "health-fitness"
       ],
       "platform": "iOS & Android",
       "price": "Free",
@@ -302,7 +314,8 @@
         "borderRadius": "22%"
       },
       "category": [
-        "mobile"
+        "lifestyle",
+        "entertainment"
       ],
       "platform": "iOS & Android",
       "price": "Free",
@@ -334,7 +347,7 @@
         "borderRadius": "22%"
       },
       "category": [
-        "mobile"
+        "productivity"
       ],
       "platform": "Android",
       "price": "Free",
@@ -365,7 +378,7 @@
         "borderRadius": "22%"
       },
       "category": [
-        "mobile"
+        "lifestyle"
       ],
       "platform": "Android",
       "price": "Free",
