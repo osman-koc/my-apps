@@ -38,9 +38,3 @@ done
 
 mv "$tmp" "$JSON_FILE"
 echo "Done. Updated $JSON_FILE"
-
-# Regenerate apps.js so file:// protocol works without a local server
-printf 'var APPS_DATA = ' > apps.js
-cat "$JSON_FILE" >> apps.js
-printf ';' >> apps.js
-echo "Regenerated apps.js"

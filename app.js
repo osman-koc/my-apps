@@ -782,21 +782,15 @@
   // Init
   async function init() {
     try {
-      if (window.APPS_DATA) {
-        // Loaded via <script src="apps.js"> — works on file:// and http://
-        data = window.APPS_DATA;
-      } else {
-        // Fallback: fetch over HTTP (when apps.js is not present)
-        const cacheBust = Math.floor(Date.now() / 300000);
-        const resp = await fetch("apps.json?v=" + cacheBust);
-        data = await resp.json();
-      }
+      const cacheBust = Math.floor(Date.now() / 300000);
+      const resp = await fetch("apps.json?v=" + cacheBust);
+      data = await resp.json();
     } catch {
       $("#contentScroll").innerHTML = `
         <div class="empty-state">
           <div class="empty-state-icon">⚠️</div>
           <h3>Failed to load apps</h3>
-          <p>Could not load apps data. Make sure apps.js or apps.json exists.</p>
+          <p>Could not fetch apps.json. Make sure the file exists.</p>
         </div>`;
       return;
     }

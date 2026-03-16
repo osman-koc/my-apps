@@ -88,7 +88,7 @@
       "subtitle": "Remote Cemetery Care Platform",
       "description": "A mobile-first cemetery care platform that enables remote grave maintenance. Users can publish care requests, while local service providers accept tasks and complete them on-site — making it possible to manage and monitor cemetery services from anywhere.",
       "longDescription": "yâdet is a mobile-first platform designed for remote grave maintenance. Whether you live far from your loved ones’ burial site or simply cannot visit regularly, yâdet connects you with trusted local service providers who complete care tasks on-site. You can publish requests, receive photo updates, and monitor progress — all from your phone, anywhere in the world.",
-      "icon": "https://osmankoc.dev/images/projects/yadet-app.png",
+      "icon": "https://osmankoc.dev/images/projects/yadet-logo.png",
       "category": [
         "mobile"
       ],
@@ -139,7 +139,7 @@
       "subtitle": "osmankoc.dev — Next.js & TypeScript",
       "description": "osmankoc.dev — Personal portfolio and blog site. Built with Next.js, TypeScript, and Tailwind CSS.",
       "longDescription": "osmankoc.dev is Osman Koç’s personal website and blog, built with Next.js 14, TypeScript, and Tailwind CSS. It features a portfolio of projects, a blog powered by Medium RSS feed, talks and presentations, and a clean minimal design. The source code is open on GitHub.",
-      "icon": "https://osmankoc.dev/images/projects/osmankocdev-home.jpg",
+      "icon": "https://osmankoc.dev/favicon.png",
       "category": [
         "web"
       ],
@@ -164,7 +164,7 @@
       "subtitle": "Nearest Hospital Finder — Telegram Bot",
       "description": "A Telegram bot that finds and transmits the name, address, telephone and map location of the nearest hospitals around you by location. Works in Türkiye.",
       "longDescription": "En Yakın Hastaneyi Bul is a Telegram bot that, given your location, instantly returns the name, address, phone number, and map link for the nearest hospitals in Türkiye. Just share your location in the chat and the bot takes care of the rest.",
-      "icon": "https://osmankoc.dev/images/projects/en-yakin-hastaneyi-bul-bot.jpg",
+      "icon": "https://osmankoc.dev/images/projects/en-yakin-hastaneyi-bul-logo.jpg",
       "category": [
         "telegram"
       ],
@@ -188,7 +188,7 @@
       "subtitle": "Nearest Pharmacy Finder — Telegram Bot",
       "description": "A Telegram bot that finds the nearest or on-duty pharmacies around you. Returns name, address, telephone and map location. Works in Türkiye.",
       "longDescription": "En Yakın Eczaneyi Bul is a Telegram bot that locates the closest open or on-duty pharmacies in Türkiye based on your shared location. It responds with the pharmacy name, address, phone number, and a direct map link — perfect for late-night situations when you need to find a nöbetçi eczane quickly.",
-      "icon": "https://osmankoc.dev/images/projects/en-yakin-eczaneyi-bul-bot.jpg",
+      "icon": "https://osmankoc.dev/images/projects/en-yakin-eczaneyi-bul-logo.jpg",
       "category": [
         "telegram"
       ],
