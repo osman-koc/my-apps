@@ -11,7 +11,7 @@ Below are all the changes and additions made in this fork.
 - Meta description, canonical URL (`apps.osmankoc.dev`) ve CNAME güncellendi.
 - Sidebar'daki geliştirici bilgisi (isim, avatar, bağlantı) Osman Koç olarak güncellendi.
 - Mobil üst bar başlığı `Appétit` → `kocdev` olarak değiştirildi.
-- Logo (`logo.svg`), "OK" monogramı içeren özel bir SVG ile değiştirildi; ek olarak `kocdev-logo.png` eklendi.
+- Logo (`logo.svg`), özel bir SVG ile değiştirildi; ek olarak `logo.png` ve `logo-oval.svg` eklendi.
 - `apps.json` içindeki `store` metadata'sı (name, developer, tagline, url, github) kocdev/osmankoc bilgileriyle güncellendi.
 
 ---

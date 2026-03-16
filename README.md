@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.svg" width="128" height="128" alt="kocdev">
+  <img src="logo.png" width="128" height="128" alt="kocdev">
 </p>
 
 <h1 align="center">kocdev store</h1>
@@ -127,6 +127,8 @@ GITHUB_TOKEN=ghp_xxx ./update-stats.sh
 ├── app.js              Routing, rendering, carousel, modals
 ├── apps.json           All app data — edit this file
 ├── logo.svg            App icon / favicon
+├── logo.png            App icon / favicon (alternative)
+├── logo-oval.svg       App icon / favicon (oval version)
 ├── update-stats.sh     Fetches GitHub stars/forks into apps.json
 ├── CNAME               Custom domain for GitHub Pages
 └── .nojekyll           Prevents Jekyll processing
