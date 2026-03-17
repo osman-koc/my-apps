@@ -359,17 +359,18 @@
         <div class="app-detail-header">
           <div class="app-detail-icon"${iconContainerStyle(app)}>${renderIcon(app)}</div>
           <div class="app-detail-title-area">
-            <div class="app-detail-title">${app.name}</div>
-            <div class="app-detail-subtitle">${app.subtitle}</div>
+            <div class="app-detail-title">${escapeHtml(app.name)}</div>
+            <div class="app-detail-subtitle">${escapeHtml(app.subtitle)}</div>
             <div class="app-detail-actions">
               ${app.links && app.links.length > 0 && !isPaidApp(app) ? `
               <div class="get-dropdown-wrapper">
-                <button class="app-detail-get-btn" data-action="get" data-app="${app.id}">
+                <button class="app-detail-get-btn" data-action="get" data-app="${app.id}"
+                  aria-haspopup="menu" aria-expanded="false" aria-controls="get-dropdown-${app.id}">
                   ${getButtonLabel(app)}
                 </button>
-                <div class="get-dropdown" id="get-dropdown-${app.id}">
+                <div class="get-dropdown" id="get-dropdown-${app.id}" role="menu">
                   ${app.links.map(link => `
-                  <a class="get-dropdown-item" href="${sanitizeUrl(link.url)}" target="_blank" rel="noopener">
+                  <a class="get-dropdown-item" href="${sanitizeUrl(link.url)}" target="_blank" rel="noopener" role="menuitem">
                     <span class="get-dropdown-icon">${platformIcon(link.platform)}</span>
                     <span class="get-dropdown-label">${escapeHtml(link.label)}</span>
                     <span class="get-dropdown-arrow">›</span>
@@ -650,11 +651,19 @@
     const overlay = $("#modalOverlay");
     const modal = $("#modal");
 
+    function sanitizeIconContainerStyle(attrStr) {
+      if (typeof attrStr !== "string") return "";
+      const match = attrStr.match(/^\s*style=(["'])([\s\S]*)\1\s*$/i);
+      if (!match) return "";
+      const sanitized = match[2].replace(/["'<>]/g, "");
+      return ` style="${sanitized}"`;
+    }
+
     modal.innerHTML = `
       <button class="modal-close" data-action="close-modal">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
-      <div class="modal-icon"${iconContainerStyle(app)}>${renderIcon(app)}</div>
+      <div class="modal-icon"${sanitizeIconContainerStyle(iconContainerStyle(app))}>${renderIcon(app)}</div>
       <h3>${escapeHtml(app.name)}</h3>
       <div class="modal-platform-links">
         ${app.links.map(link => `
@@ -723,8 +732,15 @@
             const dropdown = document.getElementById(`get-dropdown-${app.id}`);
             if (dropdown) {
               const isOpen = dropdown.classList.contains("open");
-              $$(".get-dropdown.open").forEach(d => d.classList.remove("open"));
-              if (!isOpen) dropdown.classList.add("open");
+              $$(".get-dropdown.open").forEach(d => {
+                d.classList.remove("open");
+                const prevBtn = d.previousElementSibling;
+                if (prevBtn) prevBtn.setAttribute("aria-expanded", "false");
+              });
+              if (!isOpen) {
+                dropdown.classList.add("open");
+                btn.setAttribute("aria-expanded", "true");
+              }
             }
           } else {
             showLinksModal(app);
@@ -851,7 +867,11 @@
   function bindKeyboard() {
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
-        $$(".get-dropdown.open").forEach(d => d.classList.remove("open"));
+        $$(".get-dropdown.open").forEach(d => {
+          d.classList.remove("open");
+          const prevBtn = d.previousElementSibling;
+          if (prevBtn) prevBtn.setAttribute("aria-expanded", "false");
+        });
         closeModal();
         if (currentApp) navigate(currentView);
       }
@@ -862,7 +882,11 @@
     });
     document.addEventListener("click", (e) => {
       if (!e.target.closest(".get-dropdown-wrapper")) {
-        $$(".get-dropdown.open").forEach(d => d.classList.remove("open"));
+        $$(".get-dropdown.open").forEach(d => {
+          d.classList.remove("open");
+          const prevBtn = d.previousElementSibling;
+          if (prevBtn) prevBtn.setAttribute("aria-expanded", "false");
+        });
       }
     });
   }
